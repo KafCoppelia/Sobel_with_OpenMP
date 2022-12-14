@@ -21,3 +21,7 @@ cd ..
 ```
 
     3. 通过修改`CMakeLists.txt` 下 `set(USE_OMP ON)` 的 `ON/OFF` ，并重新编译，即可启用/不启用OpenMP进行加速计算。**实际测试加速效果不明显**。
+
+## 📚 参考
+
+[ElrikPiro/sobel](https://github.com/ElrikPiro/sobel)
