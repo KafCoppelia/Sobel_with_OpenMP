@@ -31,7 +31,7 @@ void sobel_filter(Mat *img) {
 	unsigned char value = 0;
 
 #ifdef USE_OMP
-	#pragma omp parallel for default(shared) privated(gx, gy, value)
+	#pragma omp parallel for privated(i, j, gx, gy, value)
 #endif
 	for (i = 1; i < rows - 1; i++) {
 		for (j = 1; j < cols - 1; j++) {
