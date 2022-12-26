@@ -2,7 +2,7 @@
 
 ## 📦 简介
 
-基于OpenCV，使用Sobel算子实现边缘检测，并通过OpenMP实现加速计算。
+基于OpenCV，使用Sobel算子实现边缘检测，并通过OpenMP实现加速计算
 
 运行平台：gcc on GNU/Linux
 
@@ -20,7 +20,8 @@ cd ..
 ./build/sobel ./pics/test.png
 ```
 
-3. 通过修改`CMakeLists.txt` 下 `set(USE_OMP ON)` 的 `ON/OFF` ，并重新编译，即可启用/不启用OpenMP进行加速计算。**实际测试加速效果不明显**。
+3. 通过修改 `CMakeLists.txt` 下 `set(USE_OMP ON)` 的 `ON/OFF` ，并重新编译，即可启用/不启用OpenMP进行加速计算。**实际测试加速效果不明显**。
+4. 运行用时可能与目前CPU运行状态有关。
 
 ## 📚 参考
 
