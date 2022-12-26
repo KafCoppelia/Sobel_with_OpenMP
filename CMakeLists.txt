@@ -1,22 +1,16 @@
 cmake_minimum_required(VERSION 3.12)
-project(sobel)
+project(cuda_sobel)
+
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
+
+find_package(CUDA REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(OpenMP REQUIRED)
+enable_language(CUDA)
 
-include_directories(include)
-include_directories(${OpenCV_INCLUDE_DIRS} include)
-
-add_compile_options(-O3 -Wall)
-set(USE_OMP ON)
-
-if(OPENMP_FOUND AND USE_OMP)
+include_directories(${OpenCV_INCLUDE_DIRS})
 add_compile_options(-fopenmp)
-message(STATUS "Use OPENMP")
-else()
-message(STATUS "Not use OPENMP")
-endif()
 
-add_executable(sobel sobel.cpp)
-target_link_libraries(sobel ${OpenCV_LIBS} ${OpenMP_CXX_LIBRARIES})
+CUDA_ADD_EXECUTABLE(${PROJECT_NAME} sobel.cu)
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} ${OpenMP_CXX_LIBRARIES})
