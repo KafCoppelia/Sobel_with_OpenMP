@@ -1,10 +1,12 @@
-# Edge Detection with Sobel and OpenMP
+# Edge Detection with Sobel & OpenMP
+
+👉 See [branch cuda](https://github.com/KafCoppelia/Sobel_with_OpenMP_and_CUDA/tree/cuda) for CUDA version.
 
 ## 📦 简介
 
 基于OpenCV，使用Sobel算子实现边缘检测，并通过OpenMP实现加速计算
 
-运行平台：gcc on GNU/Linux
+运行平台：gcc 12.1.0 on GNU/Linux
 
 ## 🛠️ 运行
 

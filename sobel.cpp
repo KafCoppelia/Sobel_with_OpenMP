@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <time.h>
 #include <string>
-#include "sobel.h"
 #include <opencv2/opencv.hpp>
+#include "sobel.h"
 
 using namespace cv;
 
