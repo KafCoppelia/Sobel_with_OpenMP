@@ -2,9 +2,9 @@
 
 ## 📦 简介
 
-基于OpenCV，使用Sobel算子实现边缘检测，并通过CUDA实现加速计算，与CPU/OpenMP方法做对比
+基于OpenCV，使用Sobel算子实现边缘检测，通过CUDA实现加速计算，并与CPU/OpenMP方法做对比
 
-运行平台：gcc 7.5.0 + CUDA 10.2(1080Ti)
+运行平台：gcc 7.5.0 + CUDA 10.2(GTX 1080Ti)
 
 ## 🛠️ 运行
 
@@ -20,7 +20,7 @@ cd ..
 ./build/sobel ./pics/test.png
 ```
 
-3. **实际测试加速效果不明显**，可能显卡调度花费了更多的时间。
+3. **实际测试加速效果比CPU/OpenMP还慢**，可能显卡调度花费了更多的时间。
 
 ## 📚 参考
 
